@@ -2,46 +2,59 @@
 <html>
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Voces" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <scripts src="js/scripts.js"></scripts>
-    <script   src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Order Pizza!</title>
   </head>
   <body>
     <div class="container">
-      <h1>Order your pizza below</h1>
+      <div class="header">
+        <img class="slice" src="img/slice.png" alt="a pizza slice">
+        <h1>Order your pizza below</h1>
+      </div>
       <form>
-        <h3>Choose your pizza size</h3>
-        <select class="form-control" required>
-          <optgroup label="Pizza Siza">
+        <label for="size">Choose Your Pizza Size</label>
+        <select id="size" class="form-control">
+          <optgroup label="Pizza Size">
           <option value="small">Small</option>
           <option  selected value="medium">Medium</option>
           <option value="large">Large</option>
         </select>
-        <h3>Choose your crust</h3>
-        <select class="form-control" required>
+        <label for="crust">Choose Your Pizza Crust</label>
+        <select id="crust" class="form-control">
           <optgroup label="Crusts">
           <option value="thin">Thin Crust</option>
           <option selected value="normal">Normal</option>
           <option value="thick">Thick Crust</option>
         </select>
-        <h3>Choose your pizza sauce</h3>
-        <select class="form-control" required>
+        <label for="sauce">Choose Your Pizza Sauce</label>
+        <select id="sauce" class="form-control">
           <optgroup label="Sauce">
-          <option value="thin">Tomato</option>
-          <option value="normal">Pesto</option>
-          <option value="thick">BBQ</option>
+          <option value="tomato">Tomato</option>
+          <option value="pesto">Pesto</option>
+          <option value="bbq">BBQ</option>
         </select>
-        <h3>Choose your topping</h3>
-        <select class="form-control">
+        <label for="topping">Choose Your Topping</label>
+        <select id="topping" class="form-control">
           <optgroup label="Toppings">
-          <option value="onion">Onions</option>
-          <option value="mushroom">Mushrooms</option>
-          <option value="pineapple">None!</option>
+          <option value="onions">Onions</option>
+          <option value="mushrooms">Mushrooms</option>
+          <option value="none">None</option>
         </select>
         <button type="submit" class="btn btn-lg btn-default">Place My Order</button>
       </form>
+      <div id="output">
+        <h3>Receipt</h3>
+         <p>Pizza Size: <span class="size"></span></br>
+            Crust: <span class="crust"></span></br>
+            Sauce: <span class="sauce"></span></br>
+            Toppings: <span class="topping"></span></br>
+         </p>
+         <h4>Your pizza cost only &#36;<span class="cost"> </span>!</h4>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
