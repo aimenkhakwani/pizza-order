@@ -26,7 +26,7 @@ Pizza.prototype.pizzaPrice = function(){
   }
   if(this.pizzaTopping.length > 2){
       price +=3;
-  } else if (this.pizzaTopping.length >= 2){
+  } else if (this.pizzaTopping.length = 2){
     price +=2;
   } else {
     price +=1;
