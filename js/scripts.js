@@ -24,14 +24,15 @@ Pizza.prototype.pizzaPrice = function(){
   } else if (this.pizzaSauce=== "tomato" || this.pizzaSauce=== "pesto"){
     price +=2
   }
-  if(this.pizzaTopping === "onions" || this.pizzaTopping === "mushrooms"){
-    price += 2;
-  } else if (this.pizzaTopping === "none"){
-    price +=1
+  if(this.pizzaTopping.length > 2){
+      price +=3;
+  } else if (this.pizzaTopping.length >= 2){
+    price +=2;
+  } else {
+    price +=1;
   }
   return price;
 }
-
 // ui logic
 $("form").submit(function(event){
   event.preventDefault();
@@ -39,8 +40,11 @@ $("form").submit(function(event){
   var inputSize = $("#size").val();
   var inputCrust = $("#crust").val();
   var inputSauce = $("#sauce").val();
-  var inputTopping = $("#topping").val();
-  var pizzaOrder = new Pizza(inputSize, inputCrust, inputSauce, inputTopping);
+  var inputToppings = [];
+  $.each($("input[name='veggie']:checked"), function(){
+      inputToppings.push($(this).val());
+  });
+  var pizzaOrder = new Pizza(inputSize, inputCrust, inputSauce, inputToppings);
 
   $(".size").text(pizzaOrder.pizzaSize);
   $(".crust").text(pizzaOrder.pizzaCrust);
@@ -49,6 +53,7 @@ $("form").submit(function(event){
   $(".cost").text(pizzaOrder.pizzaPrice());
   $("#output").show();
 });
+
 $("#ordernow").click(function(){
   $('#introduction').slideUp();
   $('.container').slideDown();

@@ -13,6 +13,10 @@ label {
   margin-top: 5rem;
   font-size: 18px;
 }
+.form-check label {
+  margin-top: 0;
+  font-size: 15px;
+}
 form button {
   margin-top: 3rem;
   margin-left: 38%;
@@ -26,9 +30,9 @@ form button {
   margin-bottom: 3rem;
   border: 1px solid #737373;
   box-shadow: 3px 4px 10px #4d4d4d;
-  max-width: 260px;
+  max-width: 285px;
   min-height: 315px;
-  font-size: 16px;
+  font-size: 15px;
 }
 #introduction {
   text-align: center;

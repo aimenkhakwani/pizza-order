@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="introduction">
-      <h1>Pizza for under $20</h1>
+      <h1>Pizza for under $14</h1>
       <h2>For a limited time only</h2>
       <img class="img-responsive" src="img/pizza.png" alt="pizza">
       <span id="ordernow" class="btn btn-lg btn-danger">ORDER NOW</span>
@@ -42,13 +42,33 @@
           <option value="pesto">Pesto</option>
           <option value="bbq">BBQ</option>
         </select>
-        <label for="topping">Choose Your Topping</label>
-        <select id="topping" class="form-control">
-          <optgroup label="Toppings">
-          <option value="onions">Onions</option>
-          <option value="mushrooms">Mushrooms</option>
-          <option value="none">None</option>
-        </select>
+        <div id="toppings">
+          <label for="topping">Choose Your Topping</label>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="none" name="veggie">
+              None
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="mushrooms" name="veggie">
+              Mushrooms
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="onions" name="veggie">
+              Onions
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="tomatoes" name="veggie">
+              Tomatoes
+            </label>
+          </div>
+        </div>
         <button type="submit" class="btn btn-lg btn-default">Place My Order</button>
       </form>
       <div id="output">
