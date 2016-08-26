@@ -30,7 +30,7 @@ form button {
   margin-bottom: 3rem;
   border: 1px solid #737373;
   box-shadow: 3px 4px 10px #4d4d4d;
-  max-width: 300px;
+  display: inline-block;
   min-height: 315px;
   font-size: 15px;
 }
@@ -63,4 +63,8 @@ form button {
 .container span {
   text-transform: capitalize;
   font-size: 19px;
+}
+.form-check label {
+  margin-top: 0;
+  font-size: 15px;
 }
