@@ -25,12 +25,12 @@ form button {
   display: none;
   font-family: 'Coda', cursive;
   padding: 20px;
-  margin-left: 37%;
+  margin-left: 35%;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: 1px solid #737373;
   box-shadow: 3px 4px 10px #4d4d4d;
-  max-width: 285px;
+  max-width: 300px;
   min-height: 315px;
   font-size: 15px;
 }
@@ -48,6 +48,7 @@ form button {
 }
 #introduction span {
   margin-top: 4rem;
+  margin-bottom: 2rem;
   background-color: #a22a2a;
   cursor: pointer;
 }

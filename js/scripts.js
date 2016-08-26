@@ -24,12 +24,12 @@ Pizza.prototype.pizzaPrice = function(){
   } else if (this.pizzaSauce=== "tomato" || this.pizzaSauce=== "pesto"){
     price +=2
   }
-  if(this.pizzaTopping.length > 2){
-      price +=3;
-  } else if (this.pizzaTopping.length = 2){
-    price +=2;
+  if(this.pizzaTopping.length <= 1){
+      price +=1;
+  } else if (this.pizzaTopping.length >= 3){
+    price +=3;
   } else {
-    price +=1;
+    price +=2;
   }
   return price;
 }
