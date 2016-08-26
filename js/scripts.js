@@ -49,3 +49,7 @@ $("form").submit(function(event){
   $(".cost").text(pizzaOrder.pizzaPrice());
   $("#output").show();
 });
+$("#ordernow").click(function(){
+  $('#introduction').slideUp();
+  $('.container').slideDown();
+});

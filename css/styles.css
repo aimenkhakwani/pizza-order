@@ -13,13 +13,9 @@ label {
   margin-top: 5rem;
   font-size: 18px;
 }
-button {
+form button {
   margin-top: 3rem;
   margin-left: 38%;
-}
-span {
-  text-transform: capitalize;
-  font-size: 18px;
 }
 #output {
   display: none;
@@ -34,10 +30,32 @@ span {
   min-height: 315px;
   font-size: 16px;
 }
+#introduction {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Michroma', sans-serif;
+  color: #a22a2a;
+}
+#introduction img {
+  max-height: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+#introduction span {
+  margin-top: 4rem;
+  background-color: #a22a2a;
+  cursor: pointer;
+}
 .container {
+  display: none;
   box-shadow: 3px 4px 10px #4d4d4d;
   margin-top: 6rem;
   max-width: 1050px;
   padding: 30px;
   background-color: #fff;
+}
+.container span {
+  text-transform: capitalize;
+  font-size: 18px;
 }
