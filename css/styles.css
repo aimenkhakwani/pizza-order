@@ -30,7 +30,6 @@ form button {
   margin-bottom: 3rem;
   border: 1px solid #737373;
   box-shadow: 3px 4px 10px #4d4d4d;
-  display: inline-block;
   min-height: 315px;
   font-size: 15px;
 }

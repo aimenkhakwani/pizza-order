@@ -52,6 +52,7 @@ $("form").submit(function(event){
   $(".topping").text(pizzaOrder.pizzaTopping);
   $(".cost").text(pizzaOrder.pizzaPrice());
   $("#output").show();
+  $("#output").css("display", "inline-block");
 });
 
 $("#ordernow").click(function(){
