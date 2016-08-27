@@ -49,7 +49,11 @@ $("form").submit(function(event){
   $(".size").text(pizzaOrder.pizzaSize);
   $(".crust").text(pizzaOrder.pizzaCrust);
   $(".sauce").text(pizzaOrder.pizzaSauce);
-  $(".topping").text(pizzaOrder.pizzaTopping);
+  if(inputToppings.length < 1){
+    $(".topping").text("None");
+  } else{
+    $(".topping").text(pizzaOrder.pizzaTopping);
+  }
   $(".cost").text(pizzaOrder.pizzaPrice());
   $("#output").show();
   $("#output").css("display", "inline-block");
